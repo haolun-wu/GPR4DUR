@@ -1,2 +1,2 @@
-# GPR_MUR
+# GPR4MUR
 GPR for Multi-interest User Representation
