@@ -4,30 +4,71 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7d47a58-22e7-40a8-917b-3b3175b4841b" name="Changes" comment="add model">
-      <change afterPath="$PROJECT_DIR$/func/test_gpr.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/func/test_sur.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/func/train_sur.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/func/tune_gpr.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/eval_new.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/model_comirec_sa.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/model_gru4rec.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/model_mind.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/func_train_test/func_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/func_train_test/func_train.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/alpha_ndcg.py" beforeDir="false" />
+    <list default="true" id="e7d47a58-22e7-40a8-917b-3b3175b4841b" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/data/ml1m_data/ml1m_cate_map.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/ml1m_data/ml1m_item_cate.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/ml1m_data/ml1m_item_map.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/ml1m_data/ml1m_test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/ml1m_data/ml1m_train_valid.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/ml1m_data/ml1m_user_map.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/ml1m_data/ml1m_valid.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/func/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helper/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/GPR4MUR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GPR4MUR.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/best_model/ml1m_exp_SVD_d16_len20_p0.2_haolun/checkpoint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/best_model/ml1m_exp_SVD_d16_len20_p0.2_haolun/model.ckpt.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/best_model/ml1m_exp_SVD_d16_len20_p0.2_haolun/model.ckpt.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/best_model/ml1m_exp_SVD_d16_len20_p0.2_haolun/model.ckpt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/beauty_data/beauty_cate_map.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/beauty_data/beauty_item_cate.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/beauty_data/beauty_item_map.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/beauty_data/beauty_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/beauty_data/beauty_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/beauty_data/beauty_user_map.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/beauty_data/beauty_valid.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml1m_exp_data/ml1m_exp_cate_map.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml1m_exp_data/ml1m_exp_item_cate.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml1m_exp_data/ml1m_exp_item_map.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml1m_exp_data/ml1m_exp_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml1m_exp_data/ml1m_exp_train.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/ml1m_data/ml1m_train.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml1m_exp_data/ml1m_exp_user_map.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml1m_exp_data/ml1m_exp_valid.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/func/test_gpr.py" beforeDir="false" afterPath="$PROJECT_DIR$/func/test_gpr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/func/test_sur.py" beforeDir="false" afterPath="$PROJECT_DIR$/func/test_sur.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/func/train_sur.py" beforeDir="false" afterPath="$PROJECT_DIR$/func/train_sur.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/func/tune_gpr.py" beforeDir="false" afterPath="$PROJECT_DIR$/func/tune_gpr.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper/data_iterator.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper/data_iterator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/eval_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper/eval_new.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper/evaluation.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper/evaluation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/ext_alpha_ndcg.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/helper/prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper/prediction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper/preparation.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper/preparation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model_comirec_dr.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model_comirec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model_comirec.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model_comirec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model_comirec_sa.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model_comirec_sa.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model_dnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model_dnn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model_gru4rec.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model_gru4rec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model_mf.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model_mf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model_mind.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model_mind.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model_ydnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model_ydnn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_exp.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_exp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,16 +89,22 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/haolunwu/Research_project/GPR4MUR",
+    "last_opened_file_path": "/Users/haolunwu/Research_project/GPR4MUR/data",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.radar_plot_3base">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.run_exp">
     <configuration name="radar_plot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GPR4MUR" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -102,8 +149,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="run_exp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GPR4MUR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_exp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.run_exp" />
         <item itemvalue="Python.radar_plot_3base" />
         <item itemvalue="Python.radar_plot" />
       </list>
@@ -126,7 +196,7 @@
       <workItem from="1680112753368" duration="4839000" />
       <workItem from="1680378369817" duration="25000" />
       <workItem from="1680634245003" duration="597000" />
-      <workItem from="1681598748257" duration="1304000" />
+      <workItem from="1681598748257" duration="11829000" />
     </task>
     <task id="LOCAL-00001" summary="add model">
       <created>1681599983917</created>
@@ -135,7 +205,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681599983918</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update">
+      <created>1681600533352</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681600533353</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update">
+      <created>1681600559557</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681600559557</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,10 +227,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add model" />
-    <option name="LAST_COMMIT_MESSAGE" value="add model" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/GPR_MUR$radar_plot.coverage" NAME="radar_plot Coverage Results" MODIFIED="1680197264588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
+    <SUITE FILE_PATH="coverage/GPR4MUR$run_exp.coverage" NAME="run_exp Coverage Results" MODIFIED="1681613223376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GPR_MUR$radar_plot_3base.coverage" NAME="radar_plot_3base Coverage Results" MODIFIED="1680197289999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
   </component>
 </project>
