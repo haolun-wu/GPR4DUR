@@ -30,7 +30,7 @@ def parse_args():
     parser = ArgumentParser(description="GPR4MUR")
     parser.add_argument('--platform', type=str, default='CPU', choices=['CPU', 'GPU', 'TPU'])
     parser.add_argument(
-        '--p', type=str, default='tune-gpr', choices=['train-sur', 'tune-gpr', 'test-sur', 'test-gpr']
+        '--p', type=str, default='train-sur', choices=['train-sur', 'tune-gpr', 'test-sur', 'test-gpr']
     )
     parser.add_argument('--dataset', type=str, default='ml1m', choices=['ml1m', 'cd', 'beauty', 'book', 'ml20m'])
     parser.add_argument('--model_type', type=str, default='YDNN')

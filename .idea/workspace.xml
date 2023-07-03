@@ -5,53 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7d47a58-22e7-40a8-917b-3b3175b4841b" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/data/ml1m_data/ml1m_cate_map.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml1m_data/ml1m_item_cate.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml1m_data/ml1m_item_map.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml1m_data/ml1m_test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml1m_data/ml1m_train_valid.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml1m_data/ml1m_user_map.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml1m_data/ml1m_valid.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/func/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plot/plot_dimension.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plot/plot_dimension_ic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plot/plot_dimension_ir.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plot/uncertainty.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plot/user_group.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plot/user_group_degree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plot/user_group_interest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/GPR4MUR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GPR4MUR.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/best_model/ml1m_exp_SVD_d16_len20_p0.2_haolun/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/best_model/ml1m_exp_SVD_d16_len20_p0.2_haolun/model.ckpt.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/best_model/ml1m_exp_SVD_d16_len20_p0.2_haolun/model.ckpt.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/best_model/ml1m_exp_SVD_d16_len20_p0.2_haolun/model.ckpt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/beauty_data/beauty_cate_map.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/beauty_data/beauty_item_cate.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/beauty_data/beauty_item_map.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/beauty_data/beauty_test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/beauty_data/beauty_train.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/beauty_data/beauty_user_map.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/beauty_data/beauty_valid.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ml1m_exp_data/ml1m_exp_cate_map.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ml1m_exp_data/ml1m_exp_item_cate.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ml1m_exp_data/ml1m_exp_item_map.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ml1m_exp_data/ml1m_exp_test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ml1m_exp_data/ml1m_exp_train.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/ml1m_data/ml1m_train.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ml1m_exp_data/ml1m_exp_user_map.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ml1m_exp_data/ml1m_exp_valid.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/func/test_gpr.py" beforeDir="false" afterPath="$PROJECT_DIR$/func/test_gpr.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/func/test_sur.py" beforeDir="false" afterPath="$PROJECT_DIR$/func/test_sur.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/func/train_sur.py" beforeDir="false" afterPath="$PROJECT_DIR$/func/train_sur.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/func/tune_gpr.py" beforeDir="false" afterPath="$PROJECT_DIR$/func/tune_gpr.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/data_iterator.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper/data_iterator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/eval_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper/eval_new.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/evaluation.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper/evaluation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml1m_data/ml1m_train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml1m_data/ml1m_train_valid.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/helper/prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper/prediction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/preparation.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper/preparation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model_comirec.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model_comirec.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model_comirec_sa.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model_comirec_sa.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model_dnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model_dnn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model_gru4rec.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model_gru4rec.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model_mf.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model_mf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model_mind.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model_mind.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model_ydnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model_ydnn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run_exp.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_exp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,28 +51,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/haolunwu/Research_project/GPR4MUR/data",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/haolunwu/Documents/GitHub/GPR4MUR/plot&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/plot" />
       <recent name="$PROJECT_DIR$/data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run_exp">
-    <configuration name="radar_plot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.user_group">
+    <configuration name="plot_dimension" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GPR4MUR" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -113,56 +82,100 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/radar_plot.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="radar_plot_3base" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="GPR4MUR" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/radar_plot_3base.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="run_exp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="GPR4MUR" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plot" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_exp.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot/plot_dimension.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="plot_dimension_ic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GPR4MUR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plot" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot/plot_dimension_ic.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="plot_dimension_ir" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GPR4MUR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plot" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot/plot_dimension_ir.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="user_group" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GPR4MUR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plot" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot/user_group.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="user_group_interest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GPR4MUR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plot" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot/user_group_interest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -173,9 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.run_exp" />
-        <item itemvalue="Python.radar_plot_3base" />
-        <item itemvalue="Python.radar_plot" />
+        <item itemvalue="Python.user_group" />
+        <item itemvalue="Python.plot_dimension" />
+        <item itemvalue="Python.user_group_interest" />
+        <item itemvalue="Python.plot_dimension_ir" />
+        <item itemvalue="Python.plot_dimension_ic" />
       </list>
     </recent_temporary>
   </component>
@@ -197,6 +212,16 @@
       <workItem from="1680378369817" duration="25000" />
       <workItem from="1680634245003" duration="597000" />
       <workItem from="1681598748257" duration="11829000" />
+      <workItem from="1685565981301" duration="4150000" />
+      <workItem from="1686276547810" duration="12884000" />
+      <workItem from="1686532647436" duration="598000" />
+      <workItem from="1686941076242" duration="3779000" />
+      <workItem from="1687298296470" duration="597000" />
+      <workItem from="1687304733028" duration="597000" />
+      <workItem from="1687362141302" duration="460000" />
+      <workItem from="1687462773331" duration="8579000" />
+      <workItem from="1687535381003" duration="607000" />
+      <workItem from="1687558300756" duration="1331000" />
     </task>
     <task id="LOCAL-00001" summary="add model">
       <created>1681599983917</created>
@@ -232,7 +257,13 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/GPR_MUR$radar_plot.coverage" NAME="radar_plot Coverage Results" MODIFIED="1680197264588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
-    <SUITE FILE_PATH="coverage/GPR4MUR$run_exp.coverage" NAME="run_exp Coverage Results" MODIFIED="1681613223376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GPR4MUR$run_exp.coverage" NAME="run_exp Coverage Results" MODIFIED="1685566388760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GPR4MUR$plot.coverage" NAME="plot Coverage Results" MODIFIED="1686280651676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GPR4MUR$uncertainty.coverage" NAME="uncertainty Coverage Results" MODIFIED="1686941101705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot" />
+    <SUITE FILE_PATH="coverage/GPR4MUR$plot_dimension.coverage" NAME="plot_dimension Coverage Results" MODIFIED="1687558505713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot" />
+    <SUITE FILE_PATH="coverage/GPR4MUR$plot_dimension_ir.coverage" NAME="plot_dimension_ir Coverage Results" MODIFIED="1687485473206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot" />
     <SUITE FILE_PATH="coverage/GPR_MUR$radar_plot_3base.coverage" NAME="radar_plot_3base Coverage Results" MODIFIED="1680197289999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
+    <SUITE FILE_PATH="coverage/GPR4MUR$user_group_interest.coverage" NAME="user_group_interest Coverage Results" MODIFIED="1687558410582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot" />
+    <SUITE FILE_PATH="coverage/GPR4MUR$user_group.coverage" NAME="user_group Coverage Results" MODIFIED="1687558843979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot" />
   </component>
 </project>

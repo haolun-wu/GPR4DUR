@@ -268,24 +268,25 @@ def generate_full_gpr(sess, data_for_use, model, args):
             hist_mask,
             hist_rate,
         ) = prepare_data(src, tgt)
-        if args.model_type in ['MF']:
-            min_index = min(nick_id)
-            user_index = sorted(np.array(nick_id) - min_index)
-            user_embs = None
-            for u in user_index:
-                hist_rating = np.array(hist_rate[u]).reshape(1, -1)
-                item_emb = item_embs[hist_item[u]]
-                user_emb = np.dot(
-                    np.dot(hist_rating, item_emb),
-                    np.linalg.inv(np.dot(item_emb.T, item_emb)),
-                )
-                if u == 0:
-                    user_embs = user_emb
-                else:
-                    user_embs = np.concatenate((user_embs, user_emb), 0)
-        else:
-            user_embs = model.output_user(sess, [hist_item, hist_mask])
-        # start gpr process
+        # if args.model_type in ['MF']:
+        #     min_index = min(nick_id)
+        #     user_index = sorted(np.array(nick_id) - min_index)
+        #     user_embs = None
+        #     for u in user_index:
+        #         hist_rating = np.array(hist_rate[u]).reshape(1, -1)
+        #         item_emb = item_embs[hist_item[u]]
+        #         user_emb = np.dot(
+        #             np.dot(hist_rating, item_emb),
+        #             np.linalg.inv(np.dot(item_emb.T, item_emb)),
+        #         )
+        #         if u == 0:
+        #             user_embs = user_emb
+        #         else:
+        #             user_embs = np.concatenate((user_embs, user_emb), 0)
+        # else:
+        #     user_embs = model.output_user(sess, [hist_item, hist_mask])
+
+        """start gpr process"""
         st_time = time.time()
         rating_pred = np.array(['None'])
         mean_gpr, std_gpr = None, None
