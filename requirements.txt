@@ -1,3 +1,5 @@
 numpy
 tensorflow
 matplotlib
+tensorflow_probability
+scipy

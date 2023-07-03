@@ -6,8 +6,8 @@ import time
 import warnings
 
 warnings.simplefilter('ignore')
-from absl import app
-from absl import flags
+# from absl import app
+# from absl import flags
 import numpy as np
 from scipy import sparse
 # import tensorflow as tf
