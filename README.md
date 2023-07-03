@@ -1,2 +1,2 @@
-# GPR4MUR
-GPR for Multi-interest User Representation
+# GPR4DUR
+Density-based user representation through GPR for multi-interest personalized retrieval
