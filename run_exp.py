@@ -27,13 +27,13 @@ best_metric = 0.0
 
 
 def parse_args():
-    parser = ArgumentParser(description="GPR4MUR")
+    parser = ArgumentParser(description="GPR4DUR")
     parser.add_argument('--platform', type=str, default='CPU', choices=['CPU', 'GPU', 'TPU'])
     parser.add_argument(
         '--p', type=str, default='train-sur', choices=['train-sur', 'tune-gpr', 'test-sur', 'test-gpr']
     )
     parser.add_argument('--dataset', type=str, default='ml1m', choices=['ml1m', 'cd', 'beauty', 'book', 'ml20m'])
-    parser.add_argument('--model_type', type=str, default='YDNN')
+    parser.add_argument('--model_type', type=str, default='DNN')
     parser.add_argument('--random_seed', type=int, default=19, help='random_seed.')
     parser.add_argument('--embedding_dim', type=int, default=16, help='embedding_dim.')
     parser.add_argument('--hidden_size', type=int, default=16, help='hidden_size for DNN.')
@@ -48,15 +48,15 @@ def parse_args():
     parser.add_argument('--topN', type=int, default=50, help='topN.')
     # parameters for gpr
     parser.add_argument('--density_type', type=str, default='expon', help='kernel for KDE.')
-    parser.add_argument('--kernel_type', type=str, default='expon', help='kernel for GPR.')
-    parser.add_argument('--gpr_method', type=str, default='once', help='once | mean | thompson')
-    parser.add_argument('--amp', type=float, default=1, help='amplitude: controls the max value of kernel.')
+    parser.add_argument('--kernel_type', type=str, default='dot', help='kernel for GPR.')
+    parser.add_argument('--gpr_method', type=str, default='ucb', help='once | mean | thompson | ucb')
+    parser.add_argument('--amp', type=float, default=1.0, help='amplitude: controls the max value of kernel.')
     parser.add_argument('--scale', type=float, default=0.1, help='length_scale:  how sharp or wide the kernel.')
-    parser.add_argument('--gamma', type=float, default=0.1, help='mean + gamma * std')
-    parser.add_argument('--o_noise', type=float, default=0.1, help='observation noise')
+    parser.add_argument('--gamma', type=float, default=1.0, help='mean + gamma * std')
+    parser.add_argument('--o_noise', type=float, default=10.0, help='observation noise')
     parser.add_argument('--p_noise', type=float, default=0.1, help='prediction noise')
     parser.add_argument('--time', type=str, default='Y', help='time decay for GPR.')
-    parser.add_argument('--decay', type=float, default=0.02, help='time decay factor.')
+    parser.add_argument('--decay', type=float, default=0.01, help='time decay factor.')
 
     return parser.parse_args()
 
