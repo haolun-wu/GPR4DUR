@@ -16,7 +16,7 @@ from model.model_ydnn import Model_YDNN
 def run_test_gpr(num_cate, item_cate_dict, cate_item_map, args):
     # load from args
     test_data = args.test_data
-    item_pairwise_sim = args.item_pairwise_sim
+    # item_pairwise_sim = args.item_pairwise_sim
     model_type = args.model_type
     exp_name = get_exp_name(args)
     best_model_path = (
@@ -47,7 +47,7 @@ def run_test_gpr(num_cate, item_cate_dict, cate_item_map, args):
             rec_list_full_test,
             rating_pred_full_test,
             item_cate_dict,
-            item_pairwise_sim,
+            # item_pairwise_sim,
             item_embs,
             num_cate,
             args,

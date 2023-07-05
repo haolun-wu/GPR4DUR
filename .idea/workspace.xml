@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7d47a58-22e7-40a8-917b-3b3175b4841b" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cd_data/cd_cate_map.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cd_data/cd_item_cate.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cd_data/cd_item_map.txt" afterDir="false" />
@@ -22,9 +21,9 @@
       <change afterPath="$PROJECT_DIR$/data/ml20m_data/ml20m_train_valid.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/ml20m_data/ml20m_user_map.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/ml20m_data/ml20m_valid.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GPR4MUR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GPR4MUR.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/func/test_gpr.py" beforeDir="false" afterPath="$PROJECT_DIR$/func/test_gpr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model_dnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/model_dnn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run_exp.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_exp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -230,7 +229,7 @@
       <workItem from="1687535381003" duration="607000" />
       <workItem from="1687558300756" duration="1331000" />
       <workItem from="1688353449849" duration="2118000" />
-      <workItem from="1688355911648" duration="4044000" />
+      <workItem from="1688355911648" duration="5438000" />
     </task>
     <task id="LOCAL-00001" summary="add model">
       <created>1681599983917</created>
@@ -253,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1681600559557</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <option name="closed" value="true" />
+      <created>1688493094883</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1688493094883</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +281,6 @@
     <SUITE FILE_PATH="coverage/GPR_MUR$radar_plot_3base.coverage" NAME="radar_plot_3base Coverage Results" MODIFIED="1680197289999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
     <SUITE FILE_PATH="coverage/GPR4MUR$user_group_interest.coverage" NAME="user_group_interest Coverage Results" MODIFIED="1687558410582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot" />
     <SUITE FILE_PATH="coverage/GPR4MUR$user_group.coverage" NAME="user_group Coverage Results" MODIFIED="1687558843979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot" />
-    <SUITE FILE_PATH="coverage/GPR4DUR$run_exp.coverage" NAME="run_exp Coverage Results" MODIFIED="1688492811390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GPR4DUR$run_exp.coverage" NAME="run_exp Coverage Results" MODIFIED="1688493459165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

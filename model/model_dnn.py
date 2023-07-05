@@ -8,6 +8,8 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 warnings.simplefilter(action='ignore', category=Warning)
 import tensorflow as tf
 import tensorflow.compat.v1 as tf
+tf.compat.v1.disable_eager_execution()
+
 
 
 

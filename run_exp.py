@@ -30,7 +30,7 @@ def parse_args():
     parser = ArgumentParser(description="GPR4DUR")
     parser.add_argument('--platform', type=str, default='CPU', choices=['CPU', 'GPU', 'TPU'])
     parser.add_argument(
-        '--p', type=str, default='train-sur', choices=['train-sur', 'tune-gpr', 'test-sur', 'test-gpr']
+        '--p', type=str, default='test-gpr', choices=['train-sur', 'tune-gpr', 'test-sur', 'test-gpr']
     )
     parser.add_argument('--dataset', type=str, default='ml1m', choices=['ml1m', 'cd', 'beauty', 'book', 'ml20m'])
     parser.add_argument('--model_type', type=str, default='DNN')
@@ -59,33 +59,6 @@ def parse_args():
     parser.add_argument('--decay', type=float, default=0.01, help='time decay factor.')
 
     return parser.parse_args()
-
-
-# flags.DEFINE_integer('user_train_count', None, 'user_train_count.')
-# flags.DEFINE_integer('item_count', None, 'item_count.')
-# flags.DEFINE_integer('item_cate_dict', None, 'item_cate_dict.')
-# flags.DEFINE_integer('num_cate', None, 'num_cate.')
-# flags.DEFINE_integer('item_pairwise_sim', None, 'item_pairwise_sim.')
-# flags.DEFINE_integer('train_data', None, 'train_data.')
-# flags.DEFINE_integer('train_rating', None, 'train_rating.')
-# flags.DEFINE_integer('valid_data', None, 'valid_data.')
-# flags.DEFINE_integer('valid_rating', None, 'valid_rating.')
-# flags.DEFINE_integer('valid_hist', None, 'valid_hist.')
-# flags.DEFINE_integer('valid_hist_rate', None, 'valid_hist_rate.')
-# flags.DEFINE_integer('valid_holdout', None, 'valid_holdout.')
-# flags.DEFINE_integer('valid_holdout_rate', None, 'valid_holdout_rate.')
-# flags.DEFINE_integer('test_data', None, 'test_data.')
-# flags.DEFINE_integer('test_rating', None, 'test_rating.')
-# flags.DEFINE_integer('test_hist', None, 'test_hist.')
-# flags.DEFINE_integer('test_hist_rate', None, 'test_hist_rate.')
-# flags.DEFINE_integer('test_holdout', None, 'test_holdout.')
-# flags.DEFINE_integer('test_holdout_rate', None, 'test_holdout_rate.')
-# flags.DEFINE_integer('gpr_data', None, 'gpr_data.')
-# flags.DEFINE_integer('gpr_rating', None, 'gpr_rating.')
-# flags.DEFINE_integer('gpr_hist', None, 'gpr_hist.')
-# flags.DEFINE_integer('gpr_hist_rate', None, 'gpr_hist_rate.')
-# flags.DEFINE_integer('gpr_holdout', None, 'gpr_holdout.')
-# flags.DEFINE_integer('gpr_holdout_rate', None, 'gpr_holdout_rate.')
 
 
 def get_data_and_rating(data_file, args, flag):
