@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7d47a58-22e7-40a8-917b-3b3175b4841b" name="Changes" comment="update">
+    <list default="true" id="e7d47a58-22e7-40a8-917b-3b3175b4841b" name="Changes" comment="Add synthetic exp">
       <change afterPath="$PROJECT_DIR$/data/cd_data/cd_cate_map.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cd_data/cd_item_cate.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/cd_data/cd_item_map.txt" afterDir="false" />
@@ -21,15 +21,8 @@
       <change afterPath="$PROJECT_DIR$/data/ml20m_data/ml20m_train_valid.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/ml20m_data/ml20m_user_map.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/ml20m_data/ml20m_valid.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/display.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/synthetic_GPR.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/synthetic_GPR_cascade.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/synthetic_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/synthetic_load.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GPR4MUR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GPR4MUR.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/synthetic_GPR_cascade.py" beforeDir="false" afterPath="$PROJECT_DIR$/synthetic_GPR_browsing.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +78,7 @@
       <recent name="$PROJECT_DIR$/plot" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.synthetic_GPR">
+  <component name="RunManager" selected="Python.synthetic_GPR_browsing">
     <configuration name="display" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GPR4MUR" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -152,6 +145,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="synthetic_GPR_browsing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GPR4MUR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/synthetic_GPR_browsing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="synthetic_data" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true" nameIsGenerated="true">
       <module name="GPR4MUR" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -174,42 +189,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="user_group" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="GPR4MUR" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plot" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot/user_group.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
+      <item itemvalue="Python.synthetic_GPR_browsing" />
       <item itemvalue="Python.synthetic_GPR" />
       <item itemvalue="Python.display" />
       <item itemvalue="Python.run_exp" />
       <item itemvalue="Python.synthetic_data" />
-      <item itemvalue="Python.user_group" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.synthetic_GPR_browsing" />
         <item itemvalue="Python.synthetic_GPR" />
         <item itemvalue="Python.synthetic_data" />
         <item itemvalue="Python.display" />
         <item itemvalue="Python.run_exp" />
-        <item itemvalue="Python.user_group" />
       </list>
     </recent_temporary>
   </component>
@@ -244,7 +237,7 @@
       <workItem from="1688353449849" duration="2118000" />
       <workItem from="1688355911648" duration="5454000" />
       <workItem from="1688665280603" duration="19110000" />
-      <workItem from="1688948969430" duration="118000" />
+      <workItem from="1688948969430" duration="5726000" />
     </task>
     <task id="LOCAL-00001" summary="add model">
       <created>1681599983917</created>
@@ -283,7 +276,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688517186853</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add synthetic exp">
+      <option name="closed" value="true" />
+      <created>1688949142931</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688949142932</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,13 +293,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add model" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="Add synthetic exp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add synthetic exp" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/GPR4MUR$run_exp.coverage" NAME="run_exp Coverage Results" MODIFIED="1685566388760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/GPR4DUR$synthetic_GPR.coverage" NAME="synthetic_GPR Coverage Results" MODIFIED="1688948986352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GPR4DUR$synthetic_GPR.coverage" NAME="synthetic_GPR Coverage Results" MODIFIED="1688950245148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GPR4MUR$plot_dimension.coverage" NAME="plot_dimension Coverage Results" MODIFIED="1687558505713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot" />
     <SUITE FILE_PATH="coverage/GPR4MUR$plot_dimension_ir.coverage" NAME="plot_dimension_ir Coverage Results" MODIFIED="1687485473206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot" />
+    <SUITE FILE_PATH="coverage/GPR4DUR$synthetic_GPR_browsing.coverage" NAME="synthetic_GPR_browsing Coverage Results" MODIFIED="1688954649511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GPR4DUR$display.coverage" NAME="display Coverage Results" MODIFIED="1688675154851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GPR4MUR$user_group.coverage" NAME="user_group Coverage Results" MODIFIED="1687558843979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plot" />
     <SUITE FILE_PATH="coverage/GPR_MUR$radar_plot.coverage" NAME="radar_plot Coverage Results" MODIFIED="1680197264588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
