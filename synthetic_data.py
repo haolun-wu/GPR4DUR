@@ -15,14 +15,15 @@ from argparse import ArgumentParser
 def parse_args():
     parser = ArgumentParser(description="GPR4DUR_synthetic_data")
     parser.add_argument('--platform', type=str, default='CPU', choices=['CPU', 'GPU', 'TPU'])
-    parser.add_argument('--output_file_path', type=str, default='synthetic_data/')
-    parser.add_argument('--type', type=str, default='mixture_num_interests',
+    parser.add_argument('--output_file_path', type=str,
+                        default='/home/haolun/projects/def-cpsmcgil/haolun/GPR4DUR/synthetic_data/')
+    parser.add_argument('--type', type=str, default='sparse_conditional',
                         choices=['global', 'conditional', 'mixture_num_interests', 'mixture_interest_volatility',
                                  'sparse_conditional'])
-    parser.add_argument('--num_clusters', type=int, default=5, help='Number of clusters for items.')
+    parser.add_argument('--num_clusters', type=int, default=10, help='Number of clusters for items.')
     parser.add_argument('--num_data_points', type=int, default=100, help='Number of user sequences to generate.')
-    parser.add_argument('--items_per_cluster', type=int, default=30, help='Items in each cluster.')
-    parser.add_argument('--interests_per_user', type=int, default=3, help='Number of interests assigned to each user.')
+    parser.add_argument('--items_per_cluster', type=int, default=20, help='Items in each cluster.')
+    parser.add_argument('--interests_per_user', type=int, default=5, help='Number of interests assigned to each user.')
     parser.add_argument('--num_items_in_seq', type=int, default=20, help='Number of items in the sequence.')
     parser.add_argument('--alpha', type=float, default=0.8, help='Probability of staying in a cluster.')
     parser.add_argument('--gamma', type=float, default=0.1,
