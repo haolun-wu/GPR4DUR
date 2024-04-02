@@ -4,4 +4,4 @@ matplotlib
 tensorflow_probability
 scipy
 keras
-sklearn
+scikit-learn

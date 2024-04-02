@@ -1,7 +1,7 @@
 import sys
 import json
 
-name = 'ml1m_exp'
+name = 'taobao'
 if len(sys.argv) > 1:
     name = sys.argv[1]
 
@@ -14,7 +14,7 @@ with open('../data/%s_data/%s_item_map.txt' % (name, name), 'r') as f:
         item_map[conts[0]] = conts[1]
 
 if name == 'taobao':
-    with open('UserBehavior.csv', 'r') as f:
+    with open('../data_raw/UserBehavior.csv', 'r') as f:
         for line in f:
             conts = line.strip().split(',')
             iid = conts[1]
@@ -24,7 +24,7 @@ if name == 'taobao':
             if iid in item_map:
                 if cid not in cate_map:
                     cate_map[cid] = len(cate_map)
-                item_cate[item_map[iid]] = cate_map[cid]
+                item_cate[item_map[iid]] = [cate_map[cid]]
 elif name == 'book':
     with open('meta_Books.json', 'r') as f:
         for line in f:

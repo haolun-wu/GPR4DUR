@@ -38,18 +38,6 @@ def read_from_taobao(source):
             ts = int(conts[4])
             users[uid].append((iid, ts))
 
-def read_from_ml1m(source):
-    with open(source, 'r') as f:
-        for line in f:
-            conts = line.strip().split('::')
-            # if conts[2] > '0':
-            uid = int(conts[0])
-            iid = int(conts[1])
-            item_count[iid] += 1
-            ts = int(conts[3])
-            rating = int(conts[2])
-            users[uid].append((iid, ts, rating))
-
 
 if name == 'book':
     read_from_amazon('../data_raw/reviews_Books_5.json')
@@ -57,14 +45,9 @@ elif name == 'beauty':
     read_from_amazon('../data_raw/All_Beauty.json')
 elif name == 'taobao':
     read_from_taobao('../data_raw/UserBehavior.csv')
-elif 'ml1m' in name:
-    read_from_ml1m('../data_raw/ratings.dat')
-elif name == 'cd':
-    read_from_amazon('../data_raw/CDs_and_Vinyl.json')
 
 items = list(item_count.items())
 items.sort(key=lambda x:x[1], reverse=True)
-# print(items)
 
 item_total = 0
 for index, (iid, num) in enumerate(items):
@@ -78,12 +61,10 @@ num_items = len(item_map)
 
 user_ids = list(users.keys())
 filter_user_ids = []
-# sum_degree = 0
 for user in user_ids:
     item_list = users[user]
-    # sum_degree += len(item_list)
     index = 0
-    for item, timestamp, rating in item_list:
+    for item, timestamp in item_list:
         if item in item_map:
             index += 1
     if index >= filter_size:
@@ -113,18 +94,11 @@ def export_data(name, user_list):
             item_list = users[user]
             item_list.sort(key=lambda x:x[1])
             index = 0
-            if name not in ['taobao']:
-                for item, timestamp, rating in item_list:
-                    if item in item_map:
-                        f.write('%d,%d,%d,%d\n' % (user_map[user], item_map[item], index, rating))
-                        index += 1
-                        total_data += 1
-            elif name in ['taobao']:
-                for item, timestamp in item_list:
-                    if item in item_map:
-                        f.write('%d,%d,%d\n' % (user_map[user], item_map[item], index))
-                        index += 1
-                        total_data += 1
+            for item, timestamp in item_list:
+                if item in item_map:
+                    f.write('%d,%d,%d,%d,%d\n' % (user_map[user], item_map[item], index, 1, 1))
+                    index += 1
+                    total_data += 1
     return total_data
 
 path = '../data/' + name + '_data/'

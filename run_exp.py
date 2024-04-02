@@ -30,7 +30,7 @@ def parse_args():
     parser = ArgumentParser(description="GPR4DUR")
     parser.add_argument('--platform', type=str, default='CPU', choices=['CPU', 'GPU', 'TPU'])
     parser.add_argument(
-        '--p', type=str, default='test-gpr', choices=['train-sur', 'tune-gpr', 'test-sur', 'test-gpr']
+        '--p', type=str, default='train-sur', choices=['train-sur', 'tune-gpr', 'test-sur', 'test-gpr']
     )
     parser.add_argument('--dataset', type=str, default='ml1m', choices=['ml1m', 'cd', 'beauty', 'book', 'ml20m'])
     parser.add_argument('--model_type', type=str, default='DNN')
@@ -127,6 +127,11 @@ def main():
         args.user_train_count = 98401
         args.item_count = 12532
         args.maxlen = 160
+    elif args.dataset == 'taobao':
+        path = 'data/taobao_data/'
+        args.user_train_count = 605513
+        args.item_count = 570350
+        args.maxlen = 100
     ### Load data: Category. ###
     cate_file = path + args.dataset + '_item_cate.txt'
     item_cate_dict = {}
