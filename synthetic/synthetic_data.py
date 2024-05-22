@@ -16,7 +16,7 @@ def parse_args():
     parser = ArgumentParser(description="GPR4DUR_synthetic_data")
     parser.add_argument('--platform', type=str, default='CPU', choices=['CPU', 'GPU', 'TPU'])
     parser.add_argument('--output_file_path', type=str,
-                        default='/home/haolun/projects/def-cpsmcgil/haolun/GPR4DUR/synthetic_data/')
+                        default='GPR4DUR/synthetic_data/')
     parser.add_argument('--type', type=str, default='sparse_conditional',
                         choices=['global', 'conditional', 'mixture_num_interests', 'mixture_interest_volatility',
                                  'sparse_conditional'])

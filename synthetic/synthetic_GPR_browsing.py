@@ -186,22 +186,6 @@ if __name__ == '__main__':
         item_embedding_values[i] = npr.normal(loc=cluster_embeddings[int(cluster)], scale=std_dev)
     print("item_embedding_values:", item_embedding_values.shape)
 
-    # # 2. Obtain user embedding
-    # user_embedding_values = np.empty((num_users, embedding_dim))
-    # for i, interests in enumerate(user_interests):
-    #     user_embedding_values[i] = np.mean([cluster_embeddings[j] for j in interests], axis=0)
-    # print("user_embedding_values:", user_embedding_values.shape)
-
-    # # 2. Obtain user embedding
-    # user_embedding_values = np.empty((num_users, embedding_dim))
-    # for i, interests in enumerate(user_interests):
-    #     weights = npr.random(len(interests))  # Random weights for each cluster of interest for a user
-    #     weights = weights / np.sum(weights)  # Normalize weights
-    #     # Compute weighted average of cluster embeddings
-    #     user_embedding_values[i] = np.sum(
-    #         [weights[j] * cluster_embeddings[interests[j]] for j in range(len(interests))], axis=0)
-    # print("user_embedding_values:", user_embedding_values.shape)
-
     # 2. Obtain user embedding
     user_embedding_values = np.empty((num_users, embedding_dim))
     for i, interests in enumerate(user_interests):

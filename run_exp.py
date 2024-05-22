@@ -180,26 +180,6 @@ def main():
     print('user in valid:', len(args.valid_holdout))
     print('user in test:', len(args.test_holdout))
     print('user in train gpr:', len(args.gpr_holdout))
-    # ### Load Item-Item similarity. ###
-    # if args.p == 'train-sur':
-    #   pass
-    # else:
-    #   start = time.time()
-    #   if args.dataset in ['ml1m']:
-    #     cell = 'oi'
-    #   if args.dataset in ['cd']:
-    #     cell = 'is'
-    #   elif args.dataset in ['kindle', 'ml20m']:
-    #     cell = 'el'
-    #   with tf.io.gfile.GFile(
-    #       '/cns/{}-d/home/haolunwu/data/{}_data/'.format(cell, args.dataset)
-    #       + args.dataset
-    #       + '_item_sim.pkl',
-    #       mode='rb',
-    #   ) as f:
-    #     item_pairwise_sim = pickle.load(f)
-    #   args.item_pairwise_sim = item_pairwise_sim
-    #   print('load sim time:', time.time() - start)
     print(
         'p:{}, model:{}, dim:{}'.format(
             args.p,

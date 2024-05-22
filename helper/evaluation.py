@@ -319,7 +319,6 @@ def compute_auc(test_set, rec_list_all):
         num_pos = len(test_set[i])
         num_neg = num_items - num_pos
         indices = np.where(np.in1d(rec_list_all[i], test_set[i]))[0]
-        # ref: https://www.jianshu.com/p/03a11a083a6d
         auc += float(
             (num_items - 1 - indices).sum() - num_pos * (num_pos + 1) / 2.0
         ) / (num_pos * num_neg)
