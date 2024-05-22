@@ -2,14 +2,11 @@
 import os
 import numpy as np
 import warnings
-warnings.simplefilter(action='ignore', category=FutureWarning)
-warnings.simplefilter(action='ignore', category=Warning)
+
+warnings.simplefilter(action="ignore", category=FutureWarning)
+warnings.simplefilter(action="ignore", category=Warning)
 import tensorflow as tf
 import tensorflow.compat.v1 as tf
-
-
-# tf.compat.v1.disable_eager_execution()
-# import tensorflow.google.compat.v1 as tf
 
 
 def get_shape(inputs):
@@ -24,7 +21,7 @@ def get_shape(inputs):
 
 class Model_ComiRec_SA(object):
 
-    def __init__(self, args, flag='ComiRec_SA'):
+    def __init__(self, args, flag="ComiRec_SA"):
         n_uid = args.user_train_count
         n_mid = args.item_count
         embedding_dim = args.embedding_dim
@@ -47,37 +44,37 @@ class Model_ComiRec_SA(object):
         # self.rating = tf.placeholder(tf.int32, shape=(None,))
 
         self.neg_num = 1
-        with tf.name_scope('Inputs'):
+        with tf.name_scope("Inputs"):
             self.mid_his_batch_ph = tf.placeholder(
-                tf.int32, [None, None], name='mid_his_batch_ph'
+                tf.int32, [None, None], name="mid_his_batch_ph"
             )
             self.uid_batch_ph = tf.placeholder(
                 tf.int32,
                 [
                     None,
                 ],
-                name='uid_batch_ph',
+                name="uid_batch_ph",
             )
             self.mid_batch_ph = tf.placeholder(
                 tf.int32,
                 [
                     None,
                 ],
-                name='mid_batch_ph',
+                name="mid_batch_ph",
             )
-            self.mask = tf.placeholder(tf.float32, [None, None], name='mask_batch_ph')
-            self.target_ph = tf.placeholder(tf.float32, [None, 2], name='target_ph')
+            self.mask = tf.placeholder(tf.float32, [None, None], name="mask_batch_ph")
+            self.target_ph = tf.placeholder(tf.float32, [None, 2], name="target_ph")
             self.lr = tf.placeholder(tf.float64, [])
 
         self.mask_length = tf.cast(tf.reduce_sum(self.mask, -1), dtype=tf.int32)
 
         # Embedding layer
-        with tf.name_scope('Embedding_layer'):
+        with tf.name_scope("Embedding_layer"):
             self.mid_embeddings_var = tf.get_variable(
-                'mid_embedding_var', [n_mid, embedding_dim], trainable=True
+                "mid_embedding_var", [n_mid, embedding_dim], trainable=True
             )
             self.mid_embeddings_bias = tf.get_variable(
-                'bias_lookup_table',
+                "bias_lookup_table",
                 [n_mid],
                 initializer=tf.zeros_initializer(),
                 trainable=False,
@@ -99,7 +96,7 @@ class Model_ComiRec_SA(object):
 
         if add_pos:
             self.position_embedding = tf.get_variable(
-                shape=[1, seq_len, embedding_dim], name='position_embedding'
+                shape=[1, seq_len, embedding_dim], name="position_embedding"
             )
             item_list_add_pos = item_list_emb + tf.tile(
                 self.position_embedding, [tf.shape(item_list_emb)[0], 1, 1]
@@ -108,7 +105,7 @@ class Model_ComiRec_SA(object):
             item_list_add_pos = item_list_emb
 
         num_heads = num_interest
-        with tf.variable_scope('self_atten', reuse=tf.AUTO_REUSE) as scope:
+        with tf.variable_scope("self_atten", reuse=tf.AUTO_REUSE) as scope:
             item_hidden = tf.layers.dense(
                 item_list_add_pos, hidden_size * 4, activation=tf.nn.tanh
             )
@@ -116,7 +113,7 @@ class Model_ComiRec_SA(object):
             item_att_w = tf.transpose(item_att_w, [0, 2, 1])
 
             atten_mask = tf.tile(tf.expand_dims(self.mask, axis=1), [1, num_heads, 1])
-            paddings = tf.ones_like(atten_mask) * (-(2 ** 32) + 1)
+            paddings = tf.ones_like(atten_mask) * (-(2**32) + 1)
 
             item_att_w = tf.where(tf.equal(atten_mask, 0), paddings, item_att_w)
             item_att_w = tf.nn.softmax(item_att_w)
@@ -184,9 +181,9 @@ class Model_ComiRec_SA(object):
         if tf.io.gfile.exists(path) is False:
             tf.io.gfile.makedirs(path)
         saver = tf.train.Saver()
-        saver.save(sess, path + 'model.ckpt')
+        saver.save(sess, path + "model.ckpt")
 
     def restore(self, sess, path):
         saver = tf.train.Saver()
-        saver.restore(sess, path + 'model.ckpt')
-        print('model restored from %s' % path)
+        saver.restore(sess, path + "model.ckpt")
+        print("model restored from %s" % path)

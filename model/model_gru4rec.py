@@ -2,17 +2,16 @@
 import os
 import numpy as np
 import warnings
-warnings.simplefilter(action='ignore', category=FutureWarning)
-warnings.simplefilter(action='ignore', category=Warning)
+
+warnings.simplefilter(action="ignore", category=FutureWarning)
+warnings.simplefilter(action="ignore", category=Warning)
 import tensorflow as tf
 import tensorflow.compat.v1 as tf
 
 
-# tf.compat.v1.disable_eager_execution()
-# import tensorflow.google.compat.v1 as tf
 class Model_GRU4REC(object):
 
-    def __init__(self, args, flag='GRU4REC'):
+    def __init__(self, args, flag="GRU4REC"):
         n_uid = args.user_train_count
         n_mid = args.item_count
         embedding_dim = args.embedding_dim
@@ -32,37 +31,37 @@ class Model_GRU4REC(object):
         # self.rating = tf.placeholder(tf.int32, shape=(None,))
 
         self.neg_num = 1
-        with tf.name_scope('Inputs'):
+        with tf.name_scope("Inputs"):
             self.mid_his_batch_ph = tf.placeholder(
-                tf.int32, [None, None], name='mid_his_batch_ph'
+                tf.int32, [None, None], name="mid_his_batch_ph"
             )
             self.uid_batch_ph = tf.placeholder(
                 tf.int32,
                 [
                     None,
                 ],
-                name='uid_batch_ph',
+                name="uid_batch_ph",
             )
             self.mid_batch_ph = tf.placeholder(
                 tf.int32,
                 [
                     None,
                 ],
-                name='mid_batch_ph',
+                name="mid_batch_ph",
             )
-            self.mask = tf.placeholder(tf.float32, [None, None], name='mask_batch_ph')
-            self.target_ph = tf.placeholder(tf.float32, [None, 2], name='target_ph')
+            self.mask = tf.placeholder(tf.float32, [None, None], name="mask_batch_ph")
+            self.target_ph = tf.placeholder(tf.float32, [None, 2], name="target_ph")
             self.lr = tf.placeholder(tf.float64, [])
 
         self.mask_length = tf.cast(tf.reduce_sum(self.mask, -1), dtype=tf.int32)
 
         # Embedding layer
-        with tf.name_scope('Embedding_layer'):
+        with tf.name_scope("Embedding_layer"):
             self.mid_embeddings_var = tf.get_variable(
-                'mid_embedding_var', [n_mid, embedding_dim], trainable=True
+                "mid_embedding_var", [n_mid, embedding_dim], trainable=True
             )
             self.mid_embeddings_bias = tf.get_variable(
-                'bias_lookup_table',
+                "bias_lookup_table",
                 [n_mid],
                 initializer=tf.zeros_initializer(),
                 trainable=False,
@@ -80,14 +79,14 @@ class Model_GRU4REC(object):
         )
 
         # main
-        with tf.name_scope('rnn_1'):
+        with tf.name_scope("rnn_1"):
             self.sequence_length = self.mask_length
             rnn_outputs, final_state1 = tf.nn.dynamic_rnn(
                 tf.nn.rnn_cell.GRUCell(hidden_size),
                 inputs=self.item_his_eb,
                 sequence_length=self.sequence_length,
                 dtype=tf.float32,
-                scope='gru1',
+                scope="gru1",
             )
 
         self.user_eb = final_state1
@@ -137,12 +136,12 @@ class Model_GRU4REC(object):
         if tf.io.gfile.exists(path) is False:
             tf.io.gfile.makedirs(path)
         saver = tf.train.Saver()
-        saver.save(sess, path + 'model.ckpt')
+        saver.save(sess, path + "model.ckpt")
 
     def restore(self, sess, path):
         saver = tf.train.Saver()
-        saver.restore(sess, path + 'model.ckpt')
-        print('model restored from %s' % path)
+        saver.restore(sess, path + "model.ckpt")
+        print("model restored from %s" % path)
 
 
 def get_shape(inputs):

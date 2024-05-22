@@ -2,18 +2,16 @@
 import os
 import numpy as np
 import warnings
-warnings.simplefilter(action='ignore', category=FutureWarning)
-warnings.simplefilter(action='ignore', category=Warning)
+
+warnings.simplefilter(action="ignore", category=FutureWarning)
+warnings.simplefilter(action="ignore", category=Warning)
 import tensorflow as tf
 import tensorflow.compat.v1 as tf
-
-# tf.compat.v1.disable_eager_execution()
-# import tensorflow.google.compat.v1 as tf
 
 
 class Model_MIND(object):
 
-    def __init__(self, args, flag='MIND'):
+    def __init__(self, args, flag="MIND"):
         n_uid = args.user_train_count
         n_mid = args.item_count
         embedding_dim = args.embedding_dim
@@ -37,37 +35,37 @@ class Model_MIND(object):
         # self.rating = tf.placeholder(tf.int32, shape=(None,))
 
         self.neg_num = 1
-        with tf.name_scope('Inputs'):
+        with tf.name_scope("Inputs"):
             self.mid_his_batch_ph = tf.placeholder(
-                tf.int32, [None, None], name='mid_his_batch_ph'
+                tf.int32, [None, None], name="mid_his_batch_ph"
             )
             self.uid_batch_ph = tf.placeholder(
                 tf.int32,
                 [
                     None,
                 ],
-                name='uid_batch_ph',
+                name="uid_batch_ph",
             )
             self.mid_batch_ph = tf.placeholder(
                 tf.int32,
                 [
                     None,
                 ],
-                name='mid_batch_ph',
+                name="mid_batch_ph",
             )
-            self.mask = tf.placeholder(tf.float32, [None, None], name='mask_batch_ph')
-            self.target_ph = tf.placeholder(tf.float32, [None, 2], name='target_ph')
+            self.mask = tf.placeholder(tf.float32, [None, None], name="mask_batch_ph")
+            self.target_ph = tf.placeholder(tf.float32, [None, 2], name="target_ph")
             self.lr = tf.placeholder(tf.float64, [])
 
         self.mask_length = tf.cast(tf.reduce_sum(self.mask, -1), dtype=tf.int32)
 
         # Embedding layer
-        with tf.name_scope('Embedding_layer'):
+        with tf.name_scope("Embedding_layer"):
             self.mid_embeddings_var = tf.get_variable(
-                'mid_embedding_var', [n_mid, embedding_dim], trainable=True
+                "mid_embedding_var", [n_mid, embedding_dim], trainable=True
             )
             self.mid_embeddings_bias = tf.get_variable(
-                'bias_lookup_table',
+                "bias_lookup_table",
                 [n_mid],
                 initializer=tf.zeros_initializer(),
                 trainable=False,
@@ -143,12 +141,12 @@ class Model_MIND(object):
         if tf.io.gfile.exists(path) is False:
             tf.io.gfile.makedirs(path)
         saver = tf.train.Saver()
-        saver.save(sess, path + 'model.ckpt')
+        saver.save(sess, path + "model.ckpt")
 
     def restore(self, sess, path):
         saver = tf.train.Saver()
-        saver.restore(sess, path + 'model.ckpt')
-        print('model restored from %s' % path)
+        saver.restore(sess, path + "model.ckpt")
+        print("model restored from %s" % path)
 
 
 def get_shape(inputs):
@@ -164,13 +162,13 @@ def get_shape(inputs):
 class CapsuleNetwork(tf.layers.Layer):
 
     def __init__(
-            self,
-            dim,
-            seq_len,
-            bilinear_type=2,
-            num_interest=4,
-            hard_readout=True,
-            relu_layer=True,
+        self,
+        dim,
+        seq_len,
+        bilinear_type=2,
+        num_interest=4,
+        hard_readout=True,
+        relu_layer=True,
     ):
         super(CapsuleNetwork, self).__init__()
         self.dim = dim
@@ -182,7 +180,7 @@ class CapsuleNetwork(tf.layers.Layer):
         self.stop_grad = True
 
     def call(self, item_his_emb, item_eb, mask):
-        with tf.variable_scope('bilinear', reuse=tf.AUTO_REUSE):
+        with tf.variable_scope("bilinear", reuse=tf.AUTO_REUSE):
             if self.bilinear_type == 0:
                 item_emb_hat = tf.layers.dense(
                     item_his_emb, self.dim, activation=None, bias_initializer=None
@@ -197,7 +195,7 @@ class CapsuleNetwork(tf.layers.Layer):
                 )
             else:
                 w = tf.get_variable(
-                    'weights',
+                    "weights",
                     shape=[1, self.seq_len, self.num_interest * self.dim, self.dim],
                     initializer=tf.random_normal_initializer(),
                 )
@@ -215,17 +213,13 @@ class CapsuleNetwork(tf.layers.Layer):
         )
 
         if self.stop_grad:
-            item_emb_hat_iter = tf.stop_gradient(
-                item_emb_hat, name='item_emb_hat_iter'
-            )
+            item_emb_hat_iter = tf.stop_gradient(item_emb_hat, name="item_emb_hat_iter")
         else:
             item_emb_hat_iter = item_emb_hat
 
         if self.bilinear_type > 0:
             capsule_weight = tf.stop_gradient(
-                tf.zeros(
-                    [get_shape(item_his_emb)[0], self.num_interest, self.seq_len]
-                )
+                tf.zeros([get_shape(item_his_emb)[0], self.num_interest, self.seq_len])
             )
         else:
             capsule_weight = tf.stop_gradient(
@@ -272,7 +266,7 @@ class CapsuleNetwork(tf.layers.Layer):
 
         if self.relu_layer:
             interest_capsule = tf.layers.dense(
-                interest_capsule, self.dim, activation=tf.nn.relu, name='proj'
+                interest_capsule, self.dim, activation=tf.nn.relu, name="proj"
             )
 
         atten = tf.matmul(interest_capsule, tf.reshape(item_eb, [-1, self.dim, 1]))

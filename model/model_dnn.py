@@ -4,19 +4,17 @@
 import os
 import numpy as np
 import warnings
-warnings.simplefilter(action='ignore', category=FutureWarning)
-warnings.simplefilter(action='ignore', category=Warning)
+
+warnings.simplefilter(action="ignore", category=FutureWarning)
+warnings.simplefilter(action="ignore", category=Warning)
 import tensorflow as tf
 import tensorflow.compat.v1 as tf
+
 tf.compat.v1.disable_eager_execution()
 
 
-
-
-# tf.compat.v1.disable_eager_execution()
-# import tensorflow.google.compat.v1 as tf
 class Model_DNN(object):
-    def __init__(self, args, flag='DNN'):
+    def __init__(self, args, flag="DNN"):
         n_uid = args.user_train_count
         n_mid = args.item_count
         embedding_dim = args.embedding_dim
@@ -33,32 +31,32 @@ class Model_DNN(object):
         self.n_mid = n_mid
         self.n_uid = n_uid
         # placeholder definition
-        with tf.name_scope('Inputs'):
+        with tf.name_scope("Inputs"):
             self.mid_his_batch_ph = tf.placeholder(
-                tf.int32, [None, None], name='mid_his_batch_ph'
+                tf.int32, [None, None], name="mid_his_batch_ph"
             )
             self.uid_batch_ph = tf.placeholder(
                 tf.int32,
                 [
                     None,
                 ],
-                name='uid_batch_ph',
+                name="uid_batch_ph",
             )
             self.mid_batch_ph = tf.placeholder(
                 tf.int32,
                 [
                     None,
                 ],
-                name='mid_batch_ph',
+                name="mid_batch_ph",
             )
             self.tid_batch_ph = tf.placeholder(
                 tf.int32,
                 [
                     None,
                 ],
-                name='tid_batch_ph',
+                name="tid_batch_ph",
             )
-            self.mask = tf.placeholder(tf.float32, [None, None], name='mask_batch_ph')
+            self.mask = tf.placeholder(tf.float32, [None, None], name="mask_batch_ph")
             # self.target_ph = tf.placeholder(tf.float32, [None, 2], name='target_ph')
             self.lr = tf.placeholder(tf.float64, [])
             self.rating = tf.placeholder(
@@ -66,26 +64,26 @@ class Model_DNN(object):
                 [
                     None,
                 ],
-                name='rating',
+                name="rating",
             )
             self.cate_rating = tf.placeholder(
                 tf.float32,
                 [
                     None,
                 ],
-                name='cate_rating',
+                name="cate_rating",
             )
         self.mask_length = tf.cast(tf.reduce_sum(self.mask, -1), dtype=tf.int32)
         # Embedding layer
-        with tf.name_scope('Embedding_layer'):
+        with tf.name_scope("Embedding_layer"):
             self.mid_embeddings_var = tf.get_variable(
-                'mid_embedding_var',
+                "mid_embedding_var",
                 [n_mid, embedding_dim],
                 initializer=tf.random_normal_initializer(stddev=0.01),
                 trainable=True,
             )
             self.mid_embeddings_bias = tf.get_variable(
-                'bias_lookup_table',
+                "bias_lookup_table",
                 [n_mid],
                 initializer=tf.zeros_initializer(),
                 trainable=False,
@@ -97,13 +95,13 @@ class Model_DNN(object):
                 self.mid_embeddings_var, self.mid_his_batch_ph
             )
             self.tid_embeddings_var = tf.get_variable(
-                'tid_embedding_var',
+                "tid_embedding_var",
                 [num_cate, embedding_dim],
                 initializer=tf.random_normal_initializer(stddev=0.01),
                 trainable=True,
             )
             self.tid_embeddings_bias = tf.get_variable(
-                'tid_bias_lookup_table',
+                "tid_bias_lookup_table",
                 [num_cate],
                 initializer=tf.zeros_initializer(),
                 trainable=False,
@@ -118,7 +116,7 @@ class Model_DNN(object):
             [tf.expand_dims(self.mask, -1) for _ in range(embedding_dim)], axis=-1
         )
         self.item_his_eb_mean = tf.reduce_sum(self.item_his_eb, 1) / (
-                tf.reduce_sum(tf.cast(masks, dtype=tf.float32), 1) + 1e-9
+            tf.reduce_sum(tf.cast(masks, dtype=tf.float32), 1) + 1e-9
         )
         self.uid_batch_embedded = tf.layers.dense(
             self.item_his_eb_mean, hidden_size, activation=None
@@ -126,9 +124,7 @@ class Model_DNN(object):
         ### main ###
         gamma = 1
         softmax_loss = self.build_sampled_softmax_loss(self.uid_batch_embedded)
-        softmax_loss_tag = self.build_sampled_softmax_loss_tag(
-            self.mid_batch_embedded
-        )
+        softmax_loss_tag = self.build_sampled_softmax_loss_tag(self.mid_batch_embedded)
         # ui_loss, ui_regularizer = self.build_l2_loss()
         # it_loss, it_regularizer = self.build_l2_loss_tag()
         # self.loss = softmax_loss + (it_loss + it_regularizer) * gamma
@@ -169,8 +165,8 @@ class Model_DNN(object):
         ) + tf.nn.embedding_lookup(self.mid_embeddings_bias, self.mid_batch_ph)
         regr_loss = tf.reduce_mean(tf.nn.l2_loss(prediction - self.rating))
         regularizer = self.wd * (
-                tf.nn.l2_loss(self.uid_batch_embedded)
-                + tf.nn.l2_loss(self.mid_batch_embedded)
+            tf.nn.l2_loss(self.uid_batch_embedded)
+            + tf.nn.l2_loss(self.mid_batch_embedded)
             # + tf.nn.l2_loss(self.mid_embeddings_bias)
         )
         regularizer = regularizer / self.batch_size
@@ -178,11 +174,11 @@ class Model_DNN(object):
 
     def build_l2_loss_tag(self):
         prediction = (
-                tf.reduce_sum(
-                    tf.multiply(self.mid_batch_embedded, self.tid_batch_embedded), 1
-                )
-                + tf.nn.embedding_lookup(self.mid_embeddings_bias, self.mid_batch_ph)
-                + tf.nn.embedding_lookup(self.tid_embeddings_bias, self.tid_batch_ph)
+            tf.reduce_sum(
+                tf.multiply(self.mid_batch_embedded, self.tid_batch_embedded), 1
+            )
+            + tf.nn.embedding_lookup(self.mid_embeddings_bias, self.mid_batch_ph)
+            + tf.nn.embedding_lookup(self.tid_embeddings_bias, self.tid_batch_ph)
         )
         regr_loss = tf.reduce_mean(tf.nn.l2_loss(prediction - self.cate_rating))
         regularizer = self.wd * (tf.nn.l2_loss(self.tid_batch_embedded))
@@ -220,9 +216,9 @@ class Model_DNN(object):
         # if not os.path.exists(path):
         #   os.makedirs(path)
         saver = tf.train.Saver()
-        saver.save(sess, path + 'model.ckpt')
+        saver.save(sess, path + "model.ckpt")
 
     def restore(self, sess, path):
         saver = tf.train.Saver()
-        saver.restore(sess, path + 'model.ckpt')
-        print('model restored from %s' % path)
+        saver.restore(sess, path + "model.ckpt")
+        print("model restored from %s" % path)
